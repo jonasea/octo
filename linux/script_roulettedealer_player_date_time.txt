@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# script to print the name of the roulette dealer with user provided date (format 0000) and time (format 00 or 00:00 or 00:00:00).
+
+cd /home/sysadmin/Lucky_Duck_Investigations/Dealer_Schedules_0310/
+
+cat $1* | grep "$2" $1* | sed 's/\t/ /g' | awk -F" " '{print $1,$2,$3,$4}'
+
